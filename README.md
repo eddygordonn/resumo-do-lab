@@ -1,59 +1,52 @@
-# resumo-do-lab
+# Resumo-do-lab
 Este repositório contém o resumo das lições aprendidas durante o desenvolvimento do lab na DIO
 
-# Criando Máquinas Virtuais no Azure
 
-## Introdução
-Este repositório contém scripts e instruções detalhadas para criar máquinas virtuais (VMs) no Azure de forma rápida e eficiente. 
+# Guia para Criação de Máquina Virtual no Azure
 
-## Conteúdo
-* **Scripts:**
-  * `create_vm.sh`: Script Bash para criar VMs Linux.
-  * `create_vm.ps1`: Script PowerShell para criar VMs Windows.
-* **Documentação:**
-  * `README.md`: Este arquivo.
-  * `arquitetura.md`: Diagrama da arquitetura da solução.
-* **Exemplos:**
-  * `configuracao_nginx.conf`: Exemplo de configuração do Nginx.
+Este guia descreve os passos para criar e configurar uma Máquina Virtual no Portal do Azure.
 
-## Como Utilizar
-1. **Clone o repositório:**
-   ```bash
-   git clone [URL inválido removido]
+## 1. Acessar o Portal do Azure
 
-Passo a Passo para Criação de uma Máquina Virtual (VM) no Azure
-1. Acesso ao Portal do Azure:
+1. Navegue até [https://portal.azure.com/](https://portal.azure.com/).
+2. Faça login com suas credenciais do Azure.
 
-Login: Acesse o portal do Azure (https://portal.azure.com/) e faça login com suas credenciais.
-2. Criação de uma Nova Máquina Virtual:
+## 2. Criar uma Nova Máquina Virtual
 
-Pesquisar: Na barra de pesquisa, digite "Máquinas Virtuais" e selecione o serviço.
-Criar: Clique em "Criar" e, em seguida, em "Máquina virtual".
-3. Configuração da Máquina Virtual:
+1. Na barra de pesquisa, digite **"Máquinas Virtuais"** e selecione o serviço.
+2. Clique em **"Criar"** e, em seguida, em **"Máquina virtual"**.
 
-Detalhes da Instância:
-Nome: Defina um nome para sua VM.
-Região: Escolha a região do Azure onde sua VM será hospedada.
-Grupo de Recursos: Selecione um grupo de recursos existente ou crie um novo para organizar seus recursos.
-Imagem: Escolha a imagem do sistema operacional desejado (Windows ou Linux).
-Tamanho:
-Tamanho: Selecione o tamanho da VM, que define a quantidade de CPU e memória.
-Discos:
-Disco do Sistema Operacional: Configure o tamanho do disco para o sistema operacional.
-Redes:
-Rede Virtual: Selecione uma rede virtual existente ou crie uma nova.
-Sub-rede: Escolha uma sub-rede dentro da rede virtual.
-Endereço IP Público: Se precisar de acesso externo à VM, habilite um endereço IP público.
-Gerenciamento:
-Monitoramento: Configure as opções de monitoramento, como diagnóstico e alertas.
-Extensões: Adicione extensões para funcionalidades adicionais, como o agente do Azure para Linux.
-Avançado:
-Disponibilidade: Configure opções de alta disponibilidade, como conjuntos de disponibilidade.
-4. Revisão e Criação:
+## 3. Configurar a Máquina Virtual
 
-Resumo: Revise todas as configurações antes de criar a VM.
-Criar: Clique em "Criar" para iniciar o processo de provisionamento da VM.
-5. Conexão à Máquina Virtual:
+### Essenciais
+- **Nome**: Atribua um nome descritivo à sua VM.
+- **Grupo de Recursos**: Selecione um grupo de recursos existente ou crie um novo para organizar seus recursos.
+- **Região**: Escolha a região do Azure mais próxima de você ou que melhor atenda às suas necessidades.
+- **Imagem**: Selecione a imagem do sistema operacional desejado (Windows ou Linux).
 
-Endereço IP Público: Se você habilitou um endereço IP público, poderá acessar a VM usando o protocolo RDP (para Windows) ou SSH (para Linux).
-Conectar: Clique no botão "Conectar" na página da VM para obter as informações de conexão.
+### Tamanho
+- Escolha o tamanho da VM que atenda às suas necessidades de CPU e memória.
+
+### Discos
+- Configure o tamanho do disco do sistema operacional.
+
+### Redes
+- **Rede Virtual**: Selecione uma rede virtual existente ou crie uma nova.
+- **Sub-rede**: Escolha uma sub-rede dentro da rede virtual.
+- **Endereço IP Público**: Se precisar de acesso externo à VM, habilite um endereço IP público.
+
+### Gerenciamento
+- Configure opções de monitoramento, diagnóstico e alertas.
+
+### Avançado
+- Explore opções adicionais como disponibilidade, identidade e tags.
+
+## 4. Revisar e Criar
+
+1. Revise todas as configurações antes de criar a VM.
+2. Clique em **"Criar"** para iniciar o provisionamento.
+
+## 5. Conectar-se à Máquina Virtual
+
+- Após a criação, você poderá se conectar à sua VM usando o protocolo **RDP (Windows)** ou **SSH (Linux)**.
+- As informações de conexão estarão disponíveis no Portal do Azure.
