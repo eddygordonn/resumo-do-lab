@@ -1,6 +1,26 @@
 # resumo-do-lab
 Este repositório contém o resumo das lições aprendidas durante o desenvolvimento do lab na DIO
 
+# Criando Máquinas Virtuais no Azure
+
+## Introdução
+Este repositório contém scripts e instruções detalhadas para criar máquinas virtuais (VMs) no Azure de forma rápida e eficiente. 
+
+## Conteúdo
+* **Scripts:**
+  * `create_vm.sh`: Script Bash para criar VMs Linux.
+  * `create_vm.ps1`: Script PowerShell para criar VMs Windows.
+* **Documentação:**
+  * `README.md`: Este arquivo.
+  * `arquitetura.md`: Diagrama da arquitetura da solução.
+* **Exemplos:**
+  * `configuracao_nginx.conf`: Exemplo de configuração do Nginx.
+
+## Como Utilizar
+1. **Clone o repositório:**
+   ```bash
+   git clone [URL inválido removido]
+
 Passo a Passo para Criação de uma Máquina Virtual (VM) no Azure
 1. Acesso ao Portal do Azure:
 
