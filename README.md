@@ -1,6 +1,7 @@
 # Resumo-do-lab
 
 
+
 <h1>
     <a href="https://www.dio.me/">
      <img align="center" width="40px" src="https://hermes.digitalinnovation.one/assets/diome/logo-minimized.png"></a>
@@ -54,7 +55,7 @@ Microsoft Azure - Localizando Serviços por Categoria.
     </tr>
      <tr>
       <td>07</td>
-      <td> Entendendo sobre Segurança e Identidade na Azure</td>    
+      <td> Entendendo sobre Segurança e Identidade na Azure</td>        
     </tr>
      <tr>
       <td>08</td>
@@ -225,7 +226,6 @@ Teste a arquitetura e ajuste-a conforme necessário, usando políticas de escala
 Monitore o desempenho com **Azure Monitor**, configurando alertas e otimizando com base no uso de recursos.
 
 
-
 # Desafio 4 - Configurando Recursos e Dimensionamentos em Máquinas Virtuais na Azure
 
 ### 1. Acessar o Portal do Azure
@@ -249,4 +249,94 @@ Para dimensionamento automático, ative **Scale Sets**, definindo políticas par
 Use o **Azure Monitor** para acompanhar o uso de recursos e ajustar conforme necessário.
 
 # Desafio 5 -Dominando o Armazenamento na Azure
+*********************************************
+
+# Desafio 6 - Entendendo sobre a Segurança e Identidade no Azure
+## 1. Configurar o Azure Active Directory (Azure AD)   
+O Azure Active Directory (Azure AD) é o serviço de identidade no Azure, essencial para gerenciar logins, autenticação e controle de acesso. A primeira etapa é configurar o Azure AD.
+
+### Acesse o Azure Portal.
+[Portal do Azure](https://azure.microsoft.com/pt-br/)
+
+No menu de serviços, procure por Azure Microsoft Entra ID.
+![image](https://github.com/user-attachments/assets/f281c1d2-0267-4db2-9129-3bcba85a3da9)
+
+No painel do Azure AD, você pode gerenciar usuários, grupos, aplicativos e funções.
+![image](https://github.com/user-attachments/assets/03402436-6401-41d7-a03a-8bc4932bca26)
+
+## 2. Adicionar Usuários ao Azure AD
+Adicionar e gerenciar usuários no Azure AD é a chave para fornecer acesso seguro.
+![image](https://github.com/user-attachments/assets/0d5d4bf4-b785-4124-b4ab-31677317f40d)
+
+
+### Dentro do Azure AD, vá para Usuários e clique em Novo usuário.
+Insira as informações do usuário, como nome, e-mail, e defina um método de autenticação (como senha temporária).
+Você também pode adicionar usuários externos como convidados, permitindo colaboração segura.
+![image](https://github.com/user-attachments/assets/c0ee647e-3838-402c-b388-de515d53b1b7)
+
+## 3. Criar e Gerenciar Grupos de Segurança
+Grupos são úteis para aplicar políticas de segurança de maneira centralizada. Você pode definir permissões de acesso com base nos grupos.
+![image](https://github.com/user-attachments/assets/6d939920-f69a-4582-abc1-bfd1138b184f)
+
+### No Azure AD, selecione Grupos e clique em Novo grupo.
+![image](https://github.com/user-attachments/assets/d036dfd8-c6f2-4e24-a227-a6301188aaae)
+Escolha o tipo de grupo: Grupo de segurança (para permissões) ou Grupo do Office 365 (para colaboração).
+Adicione usuários ou outros grupos ao novo grupo criado.
+![image](https://github.com/user-attachments/assets/37c0c7f8-077f-415d-b184-a2cf8aadd21b)
+
+## 4. Configurar Funções e Controle de Acesso Baseado em Funções (RBAC)
+O RBAC (Role-Based Access Control) é fundamental para garantir que os usuários só tenham acesso às funcionalidades necessárias para sua função.
+
+### No Azure Portal, vá até o recurso que você deseja proteger, como Máquinas Virtuais ou Armazenamento.
+Clique em Controle de Acesso (IAM).
+Selecione Adicionar função e atribua uma das funções predefinidas (como Administrador, Colaborador, etc.) ou crie uma função personalizada.
+Atribua esta função a usuários ou grupos.
+![image](https://github.com/user-attachments/assets/100e3f59-458a-44c1-a05c-4cdc9482c7d4)
+
+## 5. Implementar Autenticação Multifator (MFA)
+A MFA adiciona uma camada extra de segurança, exigindo que os usuários verifiquem suas identidades com um método adicional (como um código enviado por SMS ou um aplicativo autenticador).
+![image](https://github.com/user-attachments/assets/a8c0662f-1499-4816-9bcd-c4d82fa22292)
+
+###  Azure AD, selecione Segurança e depois Autenticação multifator.
+Escolha Métodos de autenticação e configure os métodos (como SMS ou aplicativos de autenticação).
+Habilite a MFA para todos os usuários ou para grupos específicos.
+
+## 6. Usar Políticas de Acesso Condicional
+As políticas de acesso condicional permitem que você defina regras de acesso com base em condições como localização, dispositivo ou estado de risco.
+### No Azure AD, vá até Segurança e clique em Acesso condicional.
+![image](https://github.com/user-attachments/assets/52d2765b-c241-429c-ac9b-48a2ac7a0394)
+Crie uma nova política e defina as condições, como:
+Quem: Defina os usuários/grupos.
+O que: Defina quais aplicativos ou recursos estão envolvidos.
+Condições: Como IPs, localizações ou dispositivos.
+Ações: Como permitir ou exigir MFA.
+
+### 7. Gerenciar Identidades com o Azure AD Identity Protection
+O Identity Protection no Azure AD oferece inteligência para identificar atividades suspeitas relacionadas a identidades.
+![image](https://github.com/user-attachments/assets/3ac0347c-b844-4644-a0ca-b4bed82d928b)
+
+
+## No Azure AD, vá até Segurança > Proteção de identidade.
+Veja alertas e recomendações, como logins de risco ou tentativas de login fora do padrão.
+Configure políticas de proteção automatizada para mitigar riscos.
+![image](https://github.com/user-attachments/assets/cf0f43b0-33a8-4bc0-8b91-2ad19809e9d5)
+
+### 8. Monitorar e Auditar Atividades com Azure Monitor e Log Analytics
+A segurança requer monitoramento contínuo. Use Azure Monitor e Log Analytics para monitorar atividades, gerar alertas e realizar auditorias.
+No Azure Monitor, crie alertas para atividades anormais (como tentativas de login falhas).
+Use Log Analytics para verificar logs e eventos de segurança.
+Defina auditorias regulares para analisar o uso de permissões e possíveis vulnerabilidades.
+![image](https://github.com/user-attachments/assets/88614880-c443-4439-af64-3d7463678522)
+
+### 9. Proteger Aplicações com Azure AD Application Proxy
+Se você tem aplicativos locais que precisam ser acessados de forma segura pela internet, o Azure AD Application Proxy pode ajudar.
+![image](https://github.com/user-attachments/assets/fc060c81-b933-4f9a-9588-1dbd83e5b9cc)
+
+## No Azure AD, vá para Aplicativos empresariais e configure o Application Proxy.
+Configure os aplicativos locais para serem publicados por meio do proxy, permitindo autenticação e acesso seguros via Azure AD.
+![image](https://github.com/user-attachments/assets/f1dd6629-ade5-4afd-b354-7f03e9dd5b13)
+
+### 10. Manter-se Atualizado com as Recomendações do Azure Security Center
+O Azure Security Center fornece recomendações contínuas de segurança e monitoramento do estado de segurança dos recursos.
+
 
